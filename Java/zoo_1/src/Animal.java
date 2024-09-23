@@ -10,5 +10,5 @@ public class Animal {
         this.name = name;
         this.isMammal = isMammal;
     }
-
+//here is the animal class
 }
