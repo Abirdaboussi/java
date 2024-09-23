@@ -6,13 +6,19 @@ public class Zoo {
     int currentIndex = 0;
 
     // Constructeur de la classe Zoo
-    public Zoo(String name, String city, int nbrCages) {
+    public Zoo() {
         this.name = name;
         this.city = city;
         this.nbrCages = nbrCages;
         this.animals = new Animal[25];  // Maximum de 25 animaux
     }
-
+// constructeur parametré
+    public Zoo(String name, String city, int nbrCages) {
+        this.name = name;
+        this.city = city;
+        this.nbrCages = nbrCages;
+        this.animals = new Animal[25];
+    }
     // Méthode pour ajouter un animal dans le zoo
     public void addAnimal(Animal animal) {
         if (currentIndex < animals.length) {
