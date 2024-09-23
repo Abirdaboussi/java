@@ -11,6 +11,10 @@ public class Animal {
         this.age = age;
         this.isMammal = isMammal;
     }
+    @Override
+    public String toString() {
+        return "Animal [Name = " + name + ", family = " + family + ", Age = " + age + ", isMammal = "+(isMammal? "oui":"non")+"]";
+    }
 
     //constructeur parametré
     public Animal(String family, String name, int age,boolean isMammal) {
