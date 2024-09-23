@@ -9,7 +9,6 @@ public class Animal {
         this.family = family;
         this.name = name;
         this.isMammal = isMammal;
-
     }
 
 }
