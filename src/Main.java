@@ -7,19 +7,22 @@ public class Main {
         Animal parrot = new Animal("Psittacidae", "Perroquet", 2, false);
 
         // Créer un objet Zoo (myZoo)
-        Zoo myZoo = new Zoo("Safari Park", "Tunis", 10);
+        Zoo myZoo = new Zoo("Safari Park", "Tunis", 25);
 
-        // Ajouter des animaux au zoo
-        myZoo.addAnimal(lion);
-        myZoo.addAnimal(tiger);
-        myZoo.addAnimal(elephant);
-        myZoo.addAnimal(parrot);
 
         // Afficher les informations du zoo et des animaux
         myZoo.displayZooInfo();
 
+        //add animals
+        myZoo.addAnimal(lion);
+        myZoo.addAnimal(tiger);
+
         // Afficher les informations du zoo
         System.out.println(myZoo);  // Appelle automatiquement toString()
         System.out.println(myZoo.toString());  // Appelle explicitement toString()
+
+        //search
+        System.out.println(myZoo.searchAnimal(elephant));
+        myZoo.displayAnimals();
     }
 }
