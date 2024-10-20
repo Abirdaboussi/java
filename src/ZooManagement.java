@@ -5,7 +5,7 @@ public class ZooManagement {
     String zooName = "My Zoo";
 
 
-//display info
+
     void displayInformation(){
         System.out.println(zooName + " has " + nbrCages + " cages");
     }

@@ -6,16 +6,14 @@ public class Main {
         Animal elephant = new Animal("Elephantidae", "Éléphant", 10, true);
         Animal parrot = new Animal("Psittacidae", "Perroquet", 2, false);
 
-        // Créer un objet Zoo
-        Zoo myZoo = new Zoo("Safari Park", "Tunis");
+        // Créer un objet Zoo (myZoo)
+        Zoo myZoo = new Zoo("Safari Park", "Tunis", 10);
 
-       /* // Ajouter des animaux au zoo
+        // Ajouter des animaux au zoo
         myZoo.addAnimal(lion);
         myZoo.addAnimal(tiger);
         myZoo.addAnimal(elephant);
-        myZoo.addAnimal(parrot);*/
-
-       //myZoo.addAnimal(tiger);
+        myZoo.addAnimal(parrot);
 
         // Afficher les informations du zoo et des animaux
         myZoo.displayZooInfo();

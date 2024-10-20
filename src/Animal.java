@@ -11,8 +11,6 @@ public class Animal {
         this.age = age;
         this.isMammal = isMammal;
     }
-
-    //redefinition de la methode toString
     @Override
     public String toString() {
         return "Animal [Name = " + name + ", family = " + family + ", Age = " + age + ", isMammal = "+(isMammal? "oui":"non")+"]";
