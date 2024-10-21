@@ -4,6 +4,7 @@ public class Zoo {
 
     public static final int NUMBER_OF_CAGES = 25;
     private Animal[] animals;
+    private Aquatic[] aquaticAnimals;
     private String name, city;
     private int nbrAnimals;
 
@@ -12,6 +13,7 @@ public class Zoo {
 
     public Zoo(String name, String city) {
         animals = new Animal[NUMBER_OF_CAGES];
+        aquaticAnimals = new Aquatic[10];
         this.name = name;
         this.city = city;
     }
@@ -106,5 +108,10 @@ public class Zoo {
     @Override
     public String toString() {
         return "Zoo{ Name: " + name + ", City: " + city + ", N° Cages: " + NUMBER_OF_CAGES + " N° animals: " + nbrAnimals + "}";
+    }
+
+    //TODO 26: la méthode public void addAquaticAnimal(Aquatic aquatic)
+    public void addAquaticAnimal(Aquatic aquatic) {
+        for
     }
 }
