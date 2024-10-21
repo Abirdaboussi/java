@@ -1,3 +1,8 @@
+//ToDo 19: les packages:
+package tn.esprit.gestionzoo.main;
+import tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entities.Zoo;
+
 public class Main {
     public static void main(String[] args) {
         // Créer des objets Animal en utilisant le constructeur paramétré

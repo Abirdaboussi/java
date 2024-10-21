@@ -1,9 +1,13 @@
+//ToDo 19: les packages:
+package tn.esprit.gestionzoo.entities;
+
 public class Zoo {
-    Animal[] animals;
-    String name;
-    String city;
-    static final int nbrCages=25; //static : it's related to the class not the instance // final : it's not going to change
+    private Animal[] animals;
+    private String name;
+    private String city;
+    public static final int nbrCages=25; //static : it's related to the class not the instance // final : it's not going to change
     int nbAnimals = 0;
+    //ToDo 18: restreindre l’accès aux attributs
 
 
     // Constructeur par défaut
@@ -13,10 +17,24 @@ public class Zoo {
 
     // Constructeur paramétré
     public Zoo(String name, String city, int nbrCages) {
-        this.name = name;
+        setName(name);
         this.city = city;
         this.animals = new Animal[nbrCages];  // Initialiser le tableau ici également
     }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter for name with validation
+    public void setName(String name) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Le nom du zoo ne peut pas être vide.");
+        }
+        this.name = name;
+    }
+
 
     // Méthode pour afficher les attributs du zoo
     public void displayZoo() {
@@ -44,10 +62,11 @@ public class Zoo {
     //ToDo 10: boolean addAnimal(Animal animal)
     //ToDo 12: add animal (unique)
     //ToDo 12: do not pass nbCages
+    //ToDo 17: inclure la methode isZooFull()
     public boolean addAnimal( Animal animal) {
         if (searchAnimals(animal)!=-1)
             return false;
-        if (nbAnimals == nbrCages)
+        if (isZooFull())
             return false;
         animals[nbAnimals] = animal;
         nbAnimals++;
